@@ -1,0 +1,87 @@
+{
+    "parser": "babel-eslint",
+    "parserOptions": {
+        "sourceType": "module",
+        "allowImportExportEverywhere": false,
+        "codeFrame": false
+    },
+    "extends": [
+        "airbnb",
+        "prettier",
+        "prettier/react"
+    ],
+    "env": {
+        "browser": true,
+        "jest": true
+    },
+    "rules": {
+        "no-console": "warn",
+        "max-len": [
+            "error",
+            {
+                "code": 220
+            }
+        ],
+        "prefer-promise-reject-errors": [
+            "off"
+        ],
+        "react/jsx-filename-extension": [
+            "off"
+        ],
+        "react/jsx-props-no-spreading": [
+            "off"
+        ],
+        "react/prop-types": [
+            "warn"
+        ],
+        "react-hooks/exhaustive-deps": [
+            "off"
+        ],
+        "no-return-assign": [
+            "off"
+        ],
+        "react/button-has-type": [
+            "off",
+            {
+                "reset": false
+            }
+        ],
+        "indent": [
+            "off",
+            4,
+            {
+                "ignoredNodes": [
+                    "JSXElement"
+                ]
+            }
+        ],
+        "react/jsx-indent": [
+            "off",
+            4
+        ],
+        "no-nested-ternary": [
+            "off"
+        ],
+        "no-param-reassign": [
+            "off"
+        ],
+        "react/require-default-props": [
+            "off"
+        ],
+        "import/no-duplicates": [
+            "off",
+            {
+                "considerQueryString": false
+            }
+        ],
+        "jsx-a11y/label-has-associated-control": [
+            "off"
+        ],
+        "react/forbid-prop-types": [
+            "off"
+        ],
+        "react/react-in-jsx-scope": [
+            "off"
+        ]
+    }
+}
