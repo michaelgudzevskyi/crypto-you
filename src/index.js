@@ -6,6 +6,7 @@ import ReactDOM from 'react-dom';
 import { PersistGate } from 'redux-persist/integration/react'
 import { Provider } from 'react-redux'
 import { store, persistor } from './store'
+import './styles/main.scss'
 import App from './root/App';
 import reportWebVitals from './reportWebVitals';
 
