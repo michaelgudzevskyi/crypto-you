@@ -1,9 +1,10 @@
+import { Button } from '../components'
+
 function App() {
     return (
         <div className="App">
-            <header className="App-header">
-               rehyery
-            </header>
+            <Button className="button-primary">Button</Button>
+            <Button className="button-outlined">Button</Button>
         </div>
     )
 }
