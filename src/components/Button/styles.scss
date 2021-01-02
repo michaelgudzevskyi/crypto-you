@@ -1,36 +1,46 @@
 @import '../../styles/variables';
 
 @mixin button-style() {
-    font-weight: $font-weight;
+    font-weight: $font-weight + 200;
     font-family: $font-base;
     font-size: $font-size;
     will-change: transform;
+    padding: 5px 15px 5px;
+    border-radius: 5px;
+    min-width: 211px;
+    min-height: 50px;
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+    outline: none;
     position: relative;
     cursor: pointer;
-    padding: 19px 40px 17px;
-    border-radius: 5px;
-    line-height: 2px;
-    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
 
-    &:hover {
-        box-shadow: 0 4px 17px rgba(0, 0, 0, 0.2);
-        transform: translate3d(0, -1px, 0);
-    }
-
-    &:active {
-        box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
-        transform: translate3d(0, 1px, 0);
+    span {
+        opacity: 0;
+        visibility: hidden;
     }
 }
 
-.button-primary {
+.button-contained {
     color: $color-base;
-    background: $color-blue;
-    position: relative;
-    border: none;
+    background-color: $color-blue;
     border: solid 1px $color-blue;
 
     @include button-style();
+
+    &:hover {
+        background-color: #535a8a;
+    }
+
+    &:active {
+        background-color: $color-blue;
+    }
+
+    &:disabled {
+        background-color: $color-button-disabled;
+        border: solid 1px $color-button-disabled;
+        color: #71737b;
+        cursor: not-allowed;
+    }
 
     .spinner {
         & .path {
@@ -47,6 +57,22 @@
     background: transparent;
 
     @include button-style();
+
+    &:hover {
+        color: #535a8a;
+    }
+
+    &:active {
+        color: $color-blue;
+    }
+
+    &:disabled {
+        background-color: $color-base;
+        border: solid 1px $color-button-disabled;
+        color: $color-button-disabled;
+        cursor: not-allowed;
+    }
+
     .spinner {
         & .path {
             stroke: $color-blue;
@@ -62,10 +88,11 @@
     position: absolute;
     left: 0;
     right: 0;
-    top: 7px;
+    top: 11px;
     margin: auto;
     width: 25px;
     height: 25px;
+
     & .path {
         stroke-linecap: round;
         animation: dash 1.5s ease-in-out infinite;
