@@ -1,15 +1,16 @@
 @import '../../styles/variables';
 
 .input-group {
+    position: relative;
+    width: 100%;
+
     .form-input {
-        position: relative;
         border: none;
         border-bottom: 1px solid lighten($color-base-gray, 40%);
         padding: 0;
         width: 100%;
-
         padding: 15px 15px;
-
+        box-sizing: border-box;
         color: #303030;
 
         &:focus {
@@ -33,6 +34,12 @@
             &::placeholder {
                 color: lighten($color-base-gray, 30%);
             }
+        }
+    }
+
+    .input-info {
+        &.--error {
+            color: $color-yellow;
         }
     }
 
